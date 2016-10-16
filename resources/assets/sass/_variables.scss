@@ -1,37 +1,21 @@
-
-// Body
-$body-bg: #f5f8fa;
-
-// Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
-
-// Brands
-$brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
-$brand-warning: #cbb956;
-$brand-danger:  #bf5329;
-
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-$text-color: #636b6f;
-
-// Navbar
-$navbar-default-bg: #fff;
-
-// Buttons
-$btn-default-color: $text-color;
-
-// Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
-
-// Panels
-$panel-default-heading-bg: #fff;
+// Flat colors(http://flatuicolors.com/):
+$turquoise: #1abc9c;
+$emerald: #2ecc71;
+$peter-river: #3498db;
+$amethyst: #9b59b6;
+$wet-asphalt: #34495e;
+$green-sea: #16a085;
+$nephritis: #27ae60;
+$belize-hole: #2a84bf;
+$wisteria: #8e44ad;
+$midnight-blue: #2c3e50;
+$sun-flower: #f1c40f;
+$carrot: #e67e22;
+$alizarin: #e74c3c;
+$clouds: #ecf0f1;
+$concrete: #95a5a6;
+$orange: #f39c12;
+$pumpkin: #d35400;
+$pomegranate: #c0392b;
+$silver: #bdc3c7;
+$asbestos: #7f8c8d;
