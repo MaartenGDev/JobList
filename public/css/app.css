@@ -1,4 +1,299 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.margin-left-small {
+  margin-left: 6px; }
+
+.margin-left-medium {
+  margin-left: 12px; }
+
+.margin-left-large {
+  margin-left: 24px; }
+
+.hidden {
+  display: none; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+@media screen and (max-width: 1024px) {
+  .float-left {
+    float: none; }
+  .float-right {
+    float: none; } }
+
+body,
+html {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 960px;
+  margin: 25px auto 0 auto; }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 50px); } }
+
+nav {
+  background-color: #ffffff;
+  color: #6a7180; }
+  nav ul {
+    margin: 0; }
+  nav li {
+    display: inline-block;
+    margin: 0; }
+  nav li a {
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    padding: 30px 15px;
+    text-decoration: none; }
+
+.nav-right {
+  float: right; }
+
+.nav-right-last {
+  margin-right: 10px; }
+
+li a {
+  color: #9197a3; }
+
+li a.active {
+  color: #000000; }
+
+.page {
+  color: #ffffff;
+  min-height: 100vh;
+  text-align: center; }
+  .page-title {
+    color: #ffffff;
+    margin: 0;
+    padding: 40px 0; }
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  color: white; }
+
+a.btn {
+  text-decoration: none;
+  font-size: 10px;
+  box-sizing: border-box;
+  display: inline-block; }
+
+.btn-success {
+  background-color: #2ecc71; }
+  .btn-success :hover {
+    background-color: #29b765; }
+
+.btn-primary {
+  background-color: #2c3e50; }
+  .btn-primary :hover {
+    background-color: #233140; }
+
+.btn-default {
+  background-color: #2a84bf; }
+  .btn-default :hover {
+    background-color: #2576aa; }
+
+.btn-danger {
+  background-color: #c0392b; }
+  .btn-danger :hover {
+    background-color: #ab3326; }
+
+.btn-warning {
+  background-color: #d35400; }
+  .btn-warning :hover {
+    background-color: #ba4a00; }
+
+.chip {
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 16px; }
+
+.chip-primary {
   background-color: #34495e; }
+  .chip-primary :hover {
+    background-color: #2b3c4e; }
+
+.chip-success {
+  background-color: #2ecc71; }
+  .chip-success :hover {
+    background-color: #29b765; }
+
+.chip-danger {
+  background-color: #bdc3c7; }
+  .chip-danger :hover {
+    background-color: #afb6bb; }
+
+.well {
+  min-height: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+
+.card {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding: 10px; }
+  .card h2 {
+    margin: 0; }
+
+.full-width-card {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff; }
+  .full-width-card h2.card-title {
+    padding: 20px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 17px;
+    border-bottom: 1px solid #EDEDED; }
+
+input[type=text], input[type=email], input[type=password], textarea {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #DCDEE3;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box; }
+
+.job-item {
+  margin-bottom: 22px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  width: calc(100% / 4); }
+  .job-item h3 {
+    margin-top: 0; }
+  .job-item p {
+    font-size: 14px; }
+  .job-item .job-pros {
+    color: #2ecc71; }
+  .job-item .job-cons {
+    color: #e74c3c; }
+  .job-item .job-rating {
+    margin: 0; }
+  .job-item .job-rating:last-of-type {
+    margin-bottom: 10px; }
+  .job-item .job-description {
+    margin: 0; }
+  .job-item .job-tags {
+    margin-top: 15px;
+    margin-bottom: 20px; }
+  .job-item h2.job-title {
+    padding: 20px 15px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 17px;
+    border-bottom: 1px solid #EDEDED; }
+  .job-item section {
+    padding: 10px; }
+
+.flash-message-card {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding: 10px;
+  width: 940px;
+  border-left: 4px solid #2c3e50; }
+  .flash-message-card p {
+    margin: 0;
+    font-size: 15px; }
+
+a {
+  color: #3498db; }
+
+.job-links {
+  padding: 10px 15px 20px 15px; }
+  .job-links a {
+    display: block; }
+    .job-links a i {
+      margin-right: 5px;
+      text-decoration: none; }
+  .job-links .job-link {
+    color: #3498db; }
+  .job-links .job-edit {
+    color: #27ae60; }
+
+.job-details section {
+  padding: 20px 15px;
+  border-top: 1px solid #EDEDED; }
+  .job-details section p {
+    font-size: 14px; }
+  .job-details section h2 {
+    font-weight: normal;
+    font-size: 17px; }
+
+.job-list {
+  padding: 10px; }
+
+form p:first-child {
+  margin-top: 10px; }
+
+form p:first-of-type {
+  margin-top: 10px; }
+
+form p {
+  font-size: 14px;
+  margin: 5px 0 2px 0; }
+
+input, textarea {
+  margin-bottom: 15px;
+  font-size: 14px; }
+
+.input-description {
+  max-width: 100%;
+  min-height: 150px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+  table tr {
+    background-color: white;
+    border-bottom: 1px solid #EDEDED; }
+  table tr:first-of-type {
+    border-top: 1px solid #EDEDED; }
+  table th, table td {
+    font-size: 13px;
+    text-align: left;
+    padding: 10px 15px; }
+  table td {
+    color: #606060; }
+  table td:nth-child(2), table th:nth-child(2) {
+    text-align: left; }
+  table td + td,
+  table th + th {
+    text-align: right; }
+  table tr:hover {
+    background-color: #F0F0F0; }
+
+.import-data {
+  margin: 10px 0 15px 15px; }
+
+.company-edit a {
+  text-decoration: none;
+  color: #3498db; }
+
+.company-remove a {
+  text-decoration: none;
+  color: #e74c3c; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  min-height: 100%;
+  background-color: #F6F7F8; }
 
 /*# sourceMappingURL=app.css.map */

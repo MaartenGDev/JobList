@@ -1,0 +1,36 @@
+a {
+  color: $peter-river;
+}
+
+.job-links {
+  padding: 10px 15px 20px 15px;
+
+  a{
+    i{
+      margin-right: 5px;
+      text-decoration: none;
+    }
+    display: block;
+  }
+
+
+  .job-link{
+    color: $peter-river;
+  }
+  .job-edit{
+    color: $nephritis;
+  }
+}
+
+.job-details section {
+  padding: 20px 15px;
+  border-top: 1px solid #EDEDED;
+
+  p{
+    font-size: 14px;
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 17px;
+  }
+}

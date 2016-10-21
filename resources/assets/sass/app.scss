@@ -1,5 +1,37 @@
-@import "variables";
+// Main settings
+@import 'base/settings';
 
-body{
-  background-color: $wet-asphalt;
-}
+// Sass utilities
+@import 'helpers/mixins';
+@import 'helpers/margins';
+@import 'helpers/hidden';
+@import 'helpers/floats';
+
+// Base
+@import 'base/reset';
+@import 'base/colors';
+@import 'base/fonts';
+
+// Layouts
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/page';
+
+// Components and modules
+@import 'components/buttons';
+@import 'components/chips';
+@import 'components/well';
+@import 'components/card';
+@import 'components/input';
+
+@import 'components/jobitem';
+@import 'components/flashmessagecard';
+@import 'components/jobdetailscard';
+
+// Per page styles
+@import 'pages/home';
+@import 'pages/createjob';
+@import 'pages/joblist';
+
+// Theme
+@import 'themes/theme';

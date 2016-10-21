@@ -19,10 +19,13 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $jobs = $request->user()->jobs()->get();
+
+        return view('home/index', ['jobs' => $jobs]);
     }
 }

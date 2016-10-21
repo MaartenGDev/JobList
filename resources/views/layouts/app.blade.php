@@ -11,20 +11,24 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link href="/css/app.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
     <nav>
         <ul>
+            <li><a class="{{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a></li>
+            <li><a class="{{ Request::is('jobs') ? 'active' : '' }}" href="{{ url('/jobs') }}">Jobs</a></li>
+            <li><a class="{{ Request::is('jobs/create') ? 'active' : '' }}" href="{{ url('/jobs/create') }}">Create Job</a></li>
 
             @if (Auth::guest())
-                <li><a href="{{ url('/login') }}">Login</a></li>
-                <li><a href="{{ url('/register') }}">Register</a></li>
+                <li class="nav-right"><a class="{{ Request::is('/register') ? 'active' : '' }}" href="{{ url('/register') }}">Register</a></li>
+                <li class="nav-right"><a class="{{ Request::is('/login') ? 'active' : '' }}" href="{{ url('/login') }}">Login</a></li>
             @else
-                <li>
+                <li class="nav-right nav-right-last">
                     <a href="#">{{ Auth::user()->name }}</a>
                 </li>
-                <li>
+                <li class="nav-right">
                     <a href="{{ url('/logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
@@ -37,6 +41,26 @@
         </ul>
         @endif
     </nav>
+
+    @if (count($errors) > 0 || Session::has('status'))
+        <div class="container flash-message-card">
+            @if (isset($errors) && count($errors) > 0)
+                <div class="flash flash-error">
+                    <strong>Something went wrong!</strong>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li><b>{{ $error }}</b></li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if (Session::has('status') > 0)
+                <div class="flash flash-success">
+                    <p><b>{{Session::get('status')}}</b></p>
+                </div>
+            @endif
+        </div>
+    @endif
 
     @yield('content')
 </div>
