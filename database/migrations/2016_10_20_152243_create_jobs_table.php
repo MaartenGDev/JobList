@@ -18,6 +18,9 @@ class CreateJobsTable extends Migration
             $table->string('name');
             $table->string('url');
             $table->longText('description');
+            $table->string('city');
+            $table->string('address');
+            $table->string('postal');
             $table->string('tags');
             $table->string('pros');
             $table->string('cons');

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     protected $fillable = [
-        'name', 'url', 'description', 'tags', 'pros', 'cons'
+        'name', 'url', 'description', 'city', 'address', 'postal','tags', 'pros', 'cons'
     ];
 
     public function getProsAttribute($value)

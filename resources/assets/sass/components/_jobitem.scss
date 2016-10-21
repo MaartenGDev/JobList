@@ -4,7 +4,9 @@
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  width: calc(100% / 4);
+  width: calc((100% - 50px) / 4);
+  display: inline-block;
+  margin-right: 10px;
 
   h3 {
     margin-top: 0;
@@ -48,4 +50,11 @@
     padding: 10px;
   }
 
+}
+
+@media (max-width: 1080px) {
+  .job-item{
+    width: 100%;
+    margin-right: 0;
+  }
 }

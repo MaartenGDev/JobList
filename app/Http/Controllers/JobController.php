@@ -33,6 +33,9 @@ class JobController extends Controller
             'name' => 'required|min:5|max:255',
             'url' => 'required|min:5',
             'description' => 'required|min:5',
+            'city' => 'required|min:5',
+            'address' => 'required|min:5',
+            'postal' => 'required|min:5',
             'tags' => 'required|min:5',
             'pros' => 'required|min:5',
             'cons' => 'required|min:5',
@@ -58,6 +61,9 @@ class JobController extends Controller
             'name' => 'required|min:5|max:255',
             'url' => 'required|min:5',
             'description' => 'required|min:5',
+            'city' => 'required|min:5',
+            'address' => 'required|min:5',
+            'postal' => 'required|min:5',
             'tags' => 'required|min:5',
             'pros' => 'required|min:5',
             'cons' => 'required|min:5',
@@ -69,7 +75,7 @@ class JobController extends Controller
                 ->withErrors($validator);
         }
 
-        $request->user()->jobs()->update($request->except(['_token','_method']));
+        $job->update($request->except(['_token','_method']));
 
         return redirect('/jobs')
             ->with('status', 'The job has been updated!');
