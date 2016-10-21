@@ -247,6 +247,12 @@ a {
     font-weight: normal;
     font-size: 17px; }
 
+.register-form h3 {
+  margin-top: 0; }
+
+.login-form h3 {
+  margin-top: 0; }
+
 .job-list {
   padding: 10px;
   display: -webkit-box;
