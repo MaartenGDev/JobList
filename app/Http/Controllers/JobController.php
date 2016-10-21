@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Validator;
 
 class JobController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(Request $request)
     {
         $jobs = $request->user()->jobs()->get();
