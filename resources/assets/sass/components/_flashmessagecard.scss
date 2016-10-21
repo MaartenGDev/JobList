@@ -1,0 +1,13 @@
+
+.flash-message-card{
+  @include card;
+  background-color: $white;
+  padding: 10px;
+  width: 940px;
+  border-left: 4px solid $midnight-blue;
+  p{
+    margin: 0;
+    font-size: 15px;
+  }
+}
+

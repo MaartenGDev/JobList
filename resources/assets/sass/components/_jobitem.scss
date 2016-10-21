@@ -1,0 +1,51 @@
+.job-item {
+  margin-bottom: 22px;
+  background-color: $white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  width: calc(100% / 4);
+
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    font-size: 14px;
+  }
+  .job-pros {
+    color: $emerald;
+  }
+  .job-cons {
+    color: $alizarin;
+  }
+
+  .job-rating {
+    margin: 0;
+  }
+
+  .job-rating:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .job-description {
+    margin: 0;
+  }
+
+  .job-tags {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  h2.job-title{
+    padding: 20px 15px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 17px;
+    border-bottom: 1px solid #EDEDED;
+  }
+  section{
+    padding: 10px;
+  }
+
+}

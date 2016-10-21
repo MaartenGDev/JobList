@@ -1,9 +1,37 @@
+// Main settings
+@import 'base/settings';
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+// Sass utilities
+@import 'helpers/mixins';
+@import 'helpers/margins';
+@import 'helpers/hidden';
+@import 'helpers/floats';
 
-// Variables
-@import "variables";
+// Base
+@import 'base/reset';
+@import 'base/colors';
+@import 'base/fonts';
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// Layouts
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/page';
+
+// Components and modules
+@import 'components/buttons';
+@import 'components/chips';
+@import 'components/well';
+@import 'components/card';
+@import 'components/input';
+
+@import 'components/jobitem';
+@import 'components/flashmessagecard';
+@import 'components/jobdetailscard';
+
+// Per page styles
+@import 'pages/home';
+@import 'pages/createjob';
+@import 'pages/joblist';
+
+// Theme
+@import 'themes/theme';

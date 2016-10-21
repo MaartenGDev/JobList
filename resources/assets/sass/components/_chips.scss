@@ -1,0 +1,30 @@
+.chip{
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 16px;
+}
+.chip{
+  &-primary{
+    background-color: $wet-asphalt;
+
+    :hover{
+      background-color: darken($wet-asphalt, 5);
+    }
+  }
+  &-success{
+    background-color: $emerald;
+
+    :hover{
+      background-color: darken($emerald, 5);
+    }
+  }
+  &-danger{
+    background-color: $silver;
+
+    :hover{
+      background-color: darken($silver, 5);
+    }
+  }
+}

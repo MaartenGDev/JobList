@@ -1,0 +1,35 @@
+nav {
+  background-color: $white;
+  color: #6a7180;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  li a{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    padding: 30px 15px;
+    text-decoration: none;
+  }
+}
+
+.nav-right{
+  float: right;
+}
+.nav-right-last{
+  margin-right: 10px;
+}
+
+li a{
+  color: #9197a3;
+}
+li a.active{
+  color: $black;
+}
