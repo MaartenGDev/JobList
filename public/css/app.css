@@ -174,7 +174,9 @@ input[type=text], input[type=email], input[type=password], textarea {
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  width: calc(100% / 4); }
+  width: calc((100% - 50px) / 4);
+  display: inline-block;
+  margin-right: 10px; }
   .job-item h3 {
     margin-top: 0; }
   .job-item p {
@@ -201,6 +203,11 @@ input[type=text], input[type=email], input[type=password], textarea {
     border-bottom: 1px solid #EDEDED; }
   .job-item section {
     padding: 10px; }
+
+@media (max-width: 1080px) {
+  .job-item {
+    width: 100%;
+    margin-right: 0; } }
 
 .flash-message-card {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
@@ -241,7 +248,12 @@ a {
     font-size: 17px; }
 
 .job-list {
-  padding: 10px; }
+  padding: 10px;
+  display: -webkit-box;
+  display: flex;
+  flex-flow: wrap;
+  -webkit-box-pack: start;
+  justify-content: flex-start; }
 
 form p:first-child {
   margin-top: 10px; }
