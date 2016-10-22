@@ -11,18 +11,18 @@
         <table>
             <tr>
                 <th>Name</th>
-                <th>Description</th>
-                <th>Pros</th>
-                <th>Cons</th>
+                <th class="job-extra-detail">Description</th>
+                <th class="job-extra-detail">Pros</th>
+                <th class="job-extra-detail">Cons</th>
                 <th>Edit</th>
                 <th>Remove</th>
             </tr>
             @foreach($jobs as $job)
                 <tr>
                     <td>{{ $job->name }}</td>
-                    <td>{{ substr($job->description, 0, 50) }}</td>
-                    <td>{{ count($job->pros) }}</td>
-                    <td>{{ count($job->cons) }}</td>
+                    <td class="job-extra-detail">{{ substr($job->description, 0, 50) }}</td>
+                    <td class="job-extra-detail">{{ count($job->pros) }}</td>
+                    <td class="job-extra-detail">{{ count($job->cons) }}</td>
                     <td class="company-edit"><a href="/jobs/{{ $job->id }}/edit">Edit</a></td>
                     <td class="company-remove">
                         <a href="/jobs/{{ $job->id }}"

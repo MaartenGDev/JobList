@@ -17,7 +17,7 @@ class JobController extends Controller
     {
         $jobs = $request->user()->jobs()->get();
 
-        return view('jobs/list', ['jobs' => $jobs]);
+        return view('jobs/index', ['jobs' => $jobs]);
     }
 
     public function show(Job $job){

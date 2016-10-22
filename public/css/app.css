@@ -30,13 +30,15 @@ html {
 
 .container {
   width: 960px;
-  margin: 25px auto 0 auto; }
+  margin: 25px auto; }
 
 @media screen and (max-width: 1024px) {
   .container {
     margin-left: 10px;
     margin-right: 10px;
-    width: calc(100% - 50px); } }
+    width: calc(100% - 20px); }
+  .job-extra-detail {
+    display: none; } }
 
 nav {
   background-color: #ffffff;
@@ -64,6 +66,17 @@ li a {
 
 li a.active {
   color: #000000; }
+
+.hamburger-menu {
+  display: none; }
+
+@media (max-width: 1024px) {
+  #mobile-nav {
+    display: block; }
+  .nav-right {
+    float: none; }
+  nav li.nav-item {
+    display: none; } }
 
 .page {
   color: #ffffff;

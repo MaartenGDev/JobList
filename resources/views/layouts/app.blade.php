@@ -17,18 +17,19 @@
 <div id="app">
     <nav>
         <ul>
-            <li><a class="{{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a></li>
-            <li><a class="{{ Request::is('jobs') ? 'active' : '' }}" href="{{ url('/jobs') }}">Jobs</a></li>
-            <li><a class="{{ Request::is('jobs/create') ? 'active' : '' }}" href="{{ url('/jobs/create') }}">Create Job</a></li>
+            <li><a class="hamburger-menu" id="mobile-nav" href="#"><i class="fa fa-bars" title="Mobile Navigation"></i></a></li>
+            <li class="nav-item"><a class="{{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a></li>
+            <li class="nav-item"><a class="{{ Request::is('jobs') ? 'active' : '' }}" href="{{ url('/jobs') }}">Jobs</a></li>
+            <li class="nav-item"><a class="{{ Request::is('jobs/create') ? 'active' : '' }}" href="{{ url('/jobs/create') }}">Create Job</a></li>
 
             @if (Auth::guest())
-                <li class="nav-right"><a class="{{ Request::is('/register') ? 'active' : '' }}" href="{{ url('/register') }}">Register</a></li>
-                <li class="nav-right"><a class="{{ Request::is('/login') ? 'active' : '' }}" href="{{ url('/login') }}">Login</a></li>
+                <li class="nav-item nav-right"><a class="{{ Request::is('/register') ? 'active' : '' }}" href="{{ url('/register') }}">Register</a></li>
+                <li class="nav-item nav-right"><a class="{{ Request::is('/login') ? 'active' : '' }}" href="{{ url('/login') }}">Login</a></li>
             @else
-                <li class="nav-right nav-right-last">
+                <li class="nav-item nav-right nav-right-last">
                     <a href="#">{{ Auth::user()->name }}</a>
                 </li>
-                <li class="nav-right">
+                <li class="nav-item nav-right">
                     <a href="{{ url('/logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
