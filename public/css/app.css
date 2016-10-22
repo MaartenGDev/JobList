@@ -312,6 +312,22 @@ table {
   text-decoration: none;
   color: #e74c3c; }
 
+.import-details {
+  padding: 10px; }
+
+.import-details section:first-of-type {
+  padding: 5px 15px 20px 15px;
+  border-top: none; }
+
+.import-details section {
+  padding: 20px 15px;
+  border-top: 1px solid #EDEDED; }
+  .import-details section p {
+    font-size: 14px; }
+  .import-details section h2 {
+    font-weight: normal;
+    font-size: 17px; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;

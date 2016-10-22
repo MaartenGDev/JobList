@@ -1,0 +1,20 @@
+.import-details{
+  padding: 10px;
+}
+
+.import-details section:first-of-type{
+  padding: 5px 15px 20px 15px;
+  border-top: none;
+}
+.import-details section {
+  padding: 20px 15px;
+  border-top: 1px solid #EDEDED;
+
+  p{
+    font-size: 14px;
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 17px;
+  }
+}

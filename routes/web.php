@@ -20,6 +20,12 @@ Route::delete('/jobs/{job}', 'JobController@destroy');
 Route::patch('/jobs/{job}', 'JobController@update');
 Route::get('/jobs/{job}', 'JobController@show');
 
+
+
+Route::get('/imports', 'ImportController@index');
+Route::post('/imports', 'ImportController@store');
+Route::get('/imports/create', 'ImportController@create');
+
 Route::get('/jobs', 'JobController@index');
 Route::post('/jobs', 'JobController@store');
 

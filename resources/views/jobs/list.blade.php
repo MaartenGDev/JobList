@@ -4,7 +4,7 @@
     <div class="container full-width-card">
         <h2 class="card-title">Bedrijven</h2>
         <a href="/jobs/create" class="btn btn-default import-data">Add Company</a>
-        <a href="/jobs/import" class="btn btn-success import-data">Import Data</a>
+        <a href="/imports" class="btn btn-success import-data">Import Data</a>
     </div>
 
     <div class="container full-width-card">
