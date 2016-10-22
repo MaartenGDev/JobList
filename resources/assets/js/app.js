@@ -1,5 +1,6 @@
 const mobileNavigation = document.getElementById('mobile-nav');
 let navigationIsShown = false;
+
 mobileNavigation.addEventListener("click", () => {
 
     let list = document.querySelectorAll('li.nav-item');
