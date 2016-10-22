@@ -2,12 +2,12 @@
 
 namespace App\Jobs;
 
+use App\User;
 use GuzzleHttp\Client;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Log;
 
 class AddStageJobs implements ShouldQueue
 {
@@ -15,49 +15,49 @@ class AddStageJobs implements ShouldQueue
 
     protected $city;
     protected $study;
+    /**
+     * @var User
+     */
+    private $user;
 
     /**
      * Create a new job instance.
      *
+     * @param User $user
      * @param $city
      * @param $study
      */
-    public function __construct($city, $study)
+    public function __construct(User $user, $city, $study)
     {
-
+        $this->user = $user;
         $this->city = $city;
         $this->study = $study;
     }
 
     /**
      * Execute the job.
-     *
-     * @param Client $client
      */
     public function handle()
     {
         $client = resolve(Client::class);
 
-        $query = http_build_query([
-            't' =>'Applicatie+Ontwikkelaar',
-            's' => '',
-            'z' => 'opleiding',
-            'l' => 'Nederland',
-            'b' => 'False',
-            'c' => '',
-            'lw' => '',
-            'n' => '',
-            'pg' => '1',
-            'v' => '',
-            'srt' => 'relevantie',
-            'InputTrefwoordenPlaceholderGeenTekst' => 'Voer een tekst in',
-            'InputTrefwoordenPlaceholder' => 'Opleiding bedrijf crebo id',
-            'p' => 'apeldoorn'
-        ]);
+        $response = $client->request('GET', getenv('JOB_API_URL') . "{$this->study}/{$this->city}");
 
-        $response = $client->request('GET', getenv('JOB_API_URL') . '?' . $query);
+        $companies = json_decode($response->getBody());
 
-       echo htmlspecialchars($response->getBody());
-        die();
+        foreach($companies as $company){
+            $this->user->jobs()->create([
+                'name' => trim($company->name),
+                'url' => '',
+                'description' => '',
+                'city' => ucfirst(trim($company->city)),
+                'address' => ucfirst(trim($company->address)),
+                'postal' => ucfirst(trim($company->postal)),
+                'tags' => '',
+                'pros' => '',
+                'cons' => ''
+            ]);
+
+        }
     }
 }

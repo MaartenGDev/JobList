@@ -12,17 +12,17 @@ class Job extends Model
 
     public function getProsAttribute($value)
     {
-        return array_map('trim', explode(',',$value));
+        return array_filter(array_map('trim', explode(',',$value)));
     }
 
     public function getConsAttribute($value)
     {
-        return array_map('trim', explode(',',$value));
+        return array_filter(array_map('trim', explode(',',$value)));
     }
 
     public function getTagsAttribute($value)
     {
-        return array_map('trim', explode(',',$value));
+        return array_filter(array_map('trim', explode(',',$value)));
     }
 
     public function user()

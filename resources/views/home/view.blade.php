@@ -30,6 +30,13 @@
             </section>
 
             <section>
+                <h2>Location</h2>
+                <input type="text" name="city" placeholder="City" value="{{ $job->city  }}">
+                <input type="text" name="address" placeholder="Address" value="{{ $job->address }}">
+                <input type="text" name="postal" placeholder="Postal" value="{{ $job->postal }}">
+            </section>
+
+            <section>
                 <h2>Options</h2>
 
                 <a class="btn btn-default" href="/jobs/{{ $job->id }}/edit"><i class="fa fa-heart" aria-hidden="true"></i> Favorite</a>

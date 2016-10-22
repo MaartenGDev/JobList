@@ -35,7 +35,7 @@ class ImportController extends Controller
         $city = $request->input('city');
         $study = $request->input('study');
 
-        dispatch(new AddStageJobs($city, $study));
+        dispatch(new AddStageJobs($request->user(), $city, $study));
 
         return redirect('/imports')
             ->with('status', 'The data has been imported!');
