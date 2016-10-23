@@ -332,6 +332,9 @@ section.selling-point {
   section.selling-point section.selling-point-preview img {
     width: 600px; }
 
+section.selling-point:first-of-type {
+  margin-top: 400px; }
+
 @media (max-width: 1024px) {
   .landing-page {
     padding: 10px; }
