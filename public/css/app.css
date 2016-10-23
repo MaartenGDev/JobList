@@ -217,7 +217,7 @@ input[type=text], input[type=email], input[type=password], textarea {
   .job-item section {
     padding: 10px; }
 
-@media (max-width: 1080px) {
+@media (max-width: 1024px) {
   .job-item {
     width: 100%;
     margin-right: 0; } }
@@ -265,6 +265,103 @@ a {
 
 .login-form h3 {
   margin-top: 0; }
+
+.register-button {
+  background-color: #2c3e50;
+  padding: 10px 50px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block; }
+  .register-button:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+    background-color: #233140; }
+
+header.preview {
+  background-color: #5465C7;
+  height: 700px;
+  text-align: center; }
+  header.preview .landing-title {
+    color: white;
+    padding-top: 50px; }
+    header.preview .landing-title h1 {
+      font-size: 50px; }
+    header.preview .landing-title p {
+      font-size: 20px; }
+  header.preview section.preview-images {
+    width: 1209px;
+    margin: 0 auto;
+    padding-top: 180px; }
+    header.preview section.preview-images img.first-preview-image {
+      margin-right: -300px; }
+    header.preview section.preview-images img.last-preview-image {
+      margin-left: 300px; }
+    header.preview section.preview-images img.middle-preview-image {
+      z-index: 1;
+      position: absolute;
+      margin-top: -80px; }
+    header.preview section.preview-images img {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+      height: 400px; }
+
+section.selling-point section.selling-point-details {
+  text-align: left;
+  display: inline-block;
+  width: 310px;
+  margin-left: 50px; }
+  section.selling-point section.selling-point-details h1 {
+    color: #000000; }
+  section.selling-point section.selling-point-details h1 span.selling-point-highlight {
+    border-bottom: 2px solid #5465C7; }
+
+section.selling-point {
+  margin: 200px auto 0 auto;
+  width: 960px;
+  max-width: 960px; }
+  section.selling-point:last-of-type {
+    margin-bottom: 50px; }
+  section.selling-point section.selling-point-details-left {
+    float: left; }
+  section.selling-point section.selling-point-details-right {
+    float: right; }
+  section.selling-point section.selling-point-preview {
+    display: inline-block; }
+  section.selling-point section.selling-point-preview img {
+    width: 600px; }
+
+section.selling-point:first-of-type {
+  margin-top: 400px; }
+
+@media (max-width: 1024px) {
+  .landing-page {
+    padding: 10px; }
+  header.preview {
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: inline-block;
+    height: inherit; }
+    header.preview .landing-title {
+      padding-top: 0; }
+    header.preview .register-button {
+      margin-top: 100px;
+      margin-bottom: 20px; }
+  header.preview .preview-images {
+    display: none; }
+  section.selling-point:first-of-type {
+    margin-top: 20px; }
+  section.selling-point {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px; }
+    section.selling-point section.selling-point-preview img {
+      width: 100%; }
+    section.selling-point section.selling-point-details {
+      margin: 0;
+      width: 100%; } }
 
 .job-list {
   padding: 10px;

@@ -3,19 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -24,8 +15,12 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $jobs = $request->user()->jobs()->get();
+        if(Auth::check()){
+            $jobs = $request->user()->jobs()->get();
 
-        return view('home/index', ['jobs' => $jobs]);
+            return view('home/index', ['jobs' => $jobs]);
+        }
+        return view('home/landing');
+
     }
 }
