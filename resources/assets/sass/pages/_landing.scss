@@ -1,0 +1,148 @@
+
+.register-button {
+  background-color: $midnight-blue;
+  padding: 10px 50px;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+
+  &:hover {
+    $bottom-shadow: rgba(0, 0, 0, .23);
+    $bottom-left: rgba(0, 0, 0, .16);
+
+    box-shadow: 0 3px 12px $bottom-shadow, 0 3px 12px $bottom-left;
+    background-color: darken($midnight-blue, 5);
+  }
+}
+
+header.preview {
+  background-color: #5465C7;
+  height: 700px;
+  text-align: center;
+
+  .landing-title {
+    color: white;
+    padding-top: 50px;
+
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  section.preview-images {
+    width: 1209px;
+    margin: 0 auto;
+    padding-top: 180px;
+
+    img.first-preview-image {
+      margin-right: -300px;
+    }
+
+    img.last-preview-image {
+      margin-left: 300px;
+    }
+
+    img.middle-preview-image {
+      z-index: 1;
+      position: absolute;
+      margin-top: -80px;
+    }
+
+    img {
+      @include card();
+      height: 400px;
+    }
+  }
+}
+
+section.selling-point section.selling-point-details {
+  text-align: left;
+  display: inline-block;
+  width: 310px;
+  margin-left: 50px;
+
+  h1 {
+    color: $black;
+  }
+
+  h1 span.selling-point-highlight {
+    border-bottom: 2px solid #5465C7;
+  }
+}
+
+section.selling-point {
+  margin: 200px auto 0 auto;
+  width: 960px;
+  max-width: 960px;
+
+  &:last-of-type{
+    margin-bottom: 50px;
+  }
+
+  section.selling-point-details-left {
+    float: left;
+  }
+  section.selling-point-details-right {
+    float: right;
+  }
+
+  section.selling-point-preview {
+    display: inline-block;
+  }
+  section.selling-point-preview img {
+    width: 600px;
+  }
+
+}
+
+@media (max-width: $medium-breakpoint) {
+
+  .landing-page{
+    padding: 10px;
+  }
+
+  header.preview{
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: inline-block;
+    height: inherit;
+
+    .landing-title{
+      padding-top: 0;
+    }
+    .register-button{
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }
+  }
+
+  header.preview .preview-images{
+    display: none;
+  }
+
+  section.selling-point:first-of-type{
+    margin-top: 20px;
+  }
+  section.selling-point{
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+
+    section.selling-point-preview img{
+      width: 100%;
+    }
+
+    section.selling-point-details{
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
