@@ -76,7 +76,9 @@ li a.active {
   .nav-right {
     float: none; }
   nav li.nav-item {
-    display: none; } }
+    display: none; }
+    nav li.nav-item a {
+      width: calc(100% - 30px); } }
 
 .page {
   color: #ffffff;
@@ -129,7 +131,8 @@ a.btn {
   font-size: 12px;
   color: white;
   padding: 5px 10px;
-  border-radius: 16px; }
+  border-radius: 16px;
+  margin-bottom: 5px; }
 
 .chip-primary {
   background-color: #34495e; }
@@ -172,6 +175,10 @@ a.btn {
     font-weight: normal;
     font-size: 17px;
     border-bottom: 1px solid #EDEDED; }
+
+@media (max-width: 1024px) {
+  .card {
+    width: calc(100% - 40px); } }
 
 input[type=text], input[type=email], input[type=password], textarea {
   width: 100%;

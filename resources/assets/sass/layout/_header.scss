@@ -50,5 +50,9 @@ li a.active{
 
   nav li.nav-item{
     display: none;
+
+    a{
+      width: calc(100% - 30px);
+    }
   }
 }
