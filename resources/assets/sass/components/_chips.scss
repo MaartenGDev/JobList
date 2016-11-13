@@ -1,4 +1,4 @@
-.chip{
+.chip {
   display: inline-block;
   font-size: 12px;
   color: white;
@@ -6,25 +6,35 @@
   border-radius: 16px;
   margin-bottom: 5px;
 }
-.chip{
-  &-primary{
+
+.chip {
+  &-default {
+    border: 1px solid #CFDAED;
+    color: $wet-asphalt;
+    font-weight: bold;
+    :hover {
+      border: 1px solid darken(#CFDAED, 5);
+    }
+  }
+
+  &-primary {
     background-color: $wet-asphalt;
 
-    :hover{
+    :hover {
       background-color: darken($wet-asphalt, 5);
     }
   }
-  &-success{
+  &-success {
     background-color: $emerald;
 
-    :hover{
+    :hover {
       background-color: darken($emerald, 5);
     }
   }
-  &-danger{
+  &-danger {
     background-color: $silver;
 
-    :hover{
+    :hover {
       background-color: darken($silver, 5);
     }
   }

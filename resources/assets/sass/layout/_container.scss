@@ -1,13 +1,13 @@
 .container{
-  width: 960px;
+  width: calc(100% - 100px);
   margin: 25px auto;
 }
 
 @media screen and (max-width: $medium-breakpoint) {
   .container {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: calc(100% - 20px);
+    margin-left: 50px;
+    margin-right: 50px;
+    width: calc(100% - 100px);
   }
   .job-extra-detail{
     display: none;

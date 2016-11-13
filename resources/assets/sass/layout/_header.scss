@@ -1,6 +1,7 @@
-nav {
-  background-color: $white;
+.nav {
   color: #6a7180;
+  @include card();
+  background-color: #e74c3c;
 
   ul {
     margin: 0;
@@ -15,29 +16,31 @@ nav {
     font-size: 16px;
     display: inline-block;
     margin: 0;
-    padding: 30px 15px;
+    padding: 20px 15px;
     text-decoration: none;
+  }
+
+  .nav-right{
+    float: right;
+  }
+  .nav-right-last{
+    margin-right: 10px;
+  }
+
+  li a{
+    color: white;
+  }
+
+  li a.active{
+    border-bottom: 3px solid white;
+  }
+
+  .hamburger-menu{
+    display: none;
   }
 }
 
-.nav-right{
-  float: right;
-}
-.nav-right-last{
-  margin-right: 10px;
-}
 
-li a{
-  color: #9197a3;
-}
-
-li a.active{
-  color: $black;
-}
-
-.hamburger-menu{
-  display: none;
-}
 
 @media (max-width: $medium-breakpoint) {
   #mobile-nav{

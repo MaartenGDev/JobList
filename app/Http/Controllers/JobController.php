@@ -74,7 +74,6 @@ class JobController extends Controller
             }
         }
 
-
         return redirect('/jobs')
             ->with('status', 'The job has been created!');
     }
@@ -121,7 +120,6 @@ class JobController extends Controller
                 $job->tags()->attach([$tag->id => ['tag_type_id' => $typeId]]);
             }
         }
-
 
         return redirect('/jobs')
             ->with('status', 'The job has been updated!');

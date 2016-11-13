@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'JobList') }}</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
-    <nav>
+    <nav class="nav">
         <ul>
-            <li><a class="hamburger-menu" id="mobile-nav" href="#"><i class="fa fa-bars" title="Mobile Navigation"></i></a></li>
+            <li><a class="hamburger-menu" id="mobile-nav" href="#"><i class="fa fa-bars" title="Mobile Navigation"></i></a>
+            </li>
             <li class="nav-item"><a class="{{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a></li>
-            <li class="nav-item"><a class="{{ Request::is('jobs') ? 'active' : '' }}" href="{{ url('/jobs') }}">Jobs</a></li>
-            <li class="nav-item"><a class="{{ Request::is('jobs/create') ? 'active' : '' }}" href="{{ url('/jobs/create') }}">Create Job</a></li>
+            <li class="nav-item"><a class="{{ Request::is('/') ? '' : 'active' }}" href="{{ url('/jobs') }}">Overview</a>
+            </li>
 
             @if (Auth::guest())
-                <li class="nav-item nav-right"><a class="{{ Request::is('/register') ? 'active' : '' }}" href="{{ url('/register') }}">Register</a></li>
-                <li class="nav-item nav-right"><a class="{{ Request::is('/login') ? 'active' : '' }}" href="{{ url('/login') }}">Login</a></li>
+                <li class="nav-item nav-right"><a class="{{ Request::is('/register') ? 'active' : '' }}"
+                                                  href="{{ url('/register') }}">Register</a></li>
+                <li class="nav-item nav-right"><a class="{{ Request::is('/login') ? 'active' : '' }}"
+                                                  href="{{ url('/login') }}">Login</a></li>
             @else
                 <li class="nav-item nav-right nav-right-last">
                     <a href="#">{{ Auth::user()->name }}</a>
@@ -41,6 +41,11 @@
                 </li>
         </ul>
         @endif
+    </nav>
+    <nav class="breadcrumb">
+        <a href="/jobs" class="breadcrumb__link {{ Request::is('jobs') ? 'breadcrumb__link--active' : ''}}">Overview</a>
+        <a href="/jobs/create" class="breadcrumb__link {{ Request::is('jobs/create') ? 'breadcrumb__link--active' : ''}}">Create Job</a>
+        <a href="/imports" class="breadcrumb__link {{ Request::is('imports') ? 'breadcrumb__link--active' : ''}}">Import Data</a>
     </nav>
 
     @if (count($errors) > 0 || Session::has('status'))

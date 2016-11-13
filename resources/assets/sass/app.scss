@@ -24,11 +24,14 @@
 @import 'components/card';
 @import 'components/input';
 
-@import 'components/jobitem';
+@import 'components/job-list';
 @import 'components/flashmessagecard';
 @import 'components/jobdetailscard';
 @import 'components/signupform';
 @import 'components/loginform';
+
+@import 'components/breadcrumb';
+@import 'components/board-jobs';
 
 // Per page styles
 @import 'pages/landing';

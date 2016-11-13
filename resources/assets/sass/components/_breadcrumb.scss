@@ -1,0 +1,23 @@
+.breadcrumb{
+  background-color: white;
+  @include box-shadow;
+  &__nav {
+    margin: 0;
+  }
+
+  &__link{
+    font-size: 16px;
+    color: #34495E;
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    &--title{
+      color: #43444D;
+    }
+
+    &--active{
+      color: #e74c3c;
+    }
+  }
+}

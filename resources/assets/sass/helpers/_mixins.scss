@@ -4,3 +4,7 @@ $bottom-left: rgba(0, 0, 0, .16);
 @mixin card($margin: 3px) {
   box-shadow: 0 $margin 12px $bottom-shadow, 0 3px 12px $bottom-left;
 }
+
+@mixin box-shadow() {
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
