@@ -27,11 +27,11 @@
                 <section>
                     <h2>Details</h2>
                     <p>Tags</p>
-                    <input type="text" name="tags" placeholder="PHP 7, UX Design" value="{{ implode(',', $job->tags) }}">
+                    <input type="text" name="tags" placeholder="PHP 7, UX Design" value="{{ $job->tagList  }}">
                     <p>Pros</p>
-                    <input type="text" name="pros" placeholder="Clean Website, Clean building, Working with cool software" value="{{ implode(',', $job->pros) }}">
+                    <input type="text" name="pros" placeholder="Clean Website, Clean building, Working with cool software" value="{{ $job->proList }}">
                     <p>Cons</p>
-                    <input type="text" name="cons" placeholder="Distance, Big Company" value="{{ implode(',', $job->cons) }}">
+                    <input type="text" name="cons" placeholder="Distance, Big Company" value="{{ $job->conList  }}">
                 </section>
 
                 <section>

@@ -23,20 +23,20 @@
                 <h2>Details</h2>
                 <p>Tags</p>
                 @forelse($job->tags as $tag)
-                    <span class="chip chip-primary">{{ $tag }}</span>
+                    <span class="chip chip-primary">{{ $tag->name }}</span>
                 @empty
                     <span class="chip chip-primary">None</span>
                 @endforelse
 
                 <p>Pros</p>
                 @forelse($job->pros as $pro)
-                    <span class="chip chip-success">{{ $pro }}</span>
+                    <span class="chip chip-success">{{ $pro->name }}</span>
                 @empty
                     <span class="chip chip-success">None</span>
                 @endforelse
                 <p>Cons</p>
                 @forelse($job->cons as $con)
-                    <span class="chip chip-danger">{{ $con }}</span>
+                    <span class="chip chip-danger">{{ $con->name }}</span>
                 @empty
                     <span class="chip chip-danger">None</span>
                 @endforelse

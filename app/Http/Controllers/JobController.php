@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Job;
+use App\Tag;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use League\Flysystem\Exception;
 
 class JobController extends Controller
 {
@@ -20,7 +23,8 @@ class JobController extends Controller
         return view('jobs/index', ['jobs' => $jobs]);
     }
 
-    public function show(Job $job){
+    public function show(Job $job)
+    {
         $this->authorize('view', $job);
 
         return view('home/view', ['job' => $job]);
@@ -52,13 +56,31 @@ class JobController extends Controller
                 ->withErrors($validator);
         }
 
-        $request->user()->jobs()->create($request->all());
+        $job = $request->user()->jobs()->create($request->all());
+
+        $tagItems = [
+            ['type' => 1, 'data' => array_filter(explode(',', $request->pros))],
+            ['type' => 2, 'data' => array_filter(explode(',', $request->cons))],
+            ['type' => 3, 'data' => array_filter(explode(',', $request->tags))]
+        ];
+
+        foreach ($tagItems as $item) {
+            $typeId = $item['type'];
+            $tags = $item['data'];
+
+            foreach($tags as $tag){
+                $tag = Tag::firstOrCreate(['name' => trim($tag)]);
+                $job->tags()->attach([$tag->id => ['tag_type_id' => $typeId]]);
+            }
+        }
+
 
         return redirect('/jobs')
             ->with('status', 'The job has been created!');
     }
 
-    public function update(Request $request, Job $job){
+    public function update(Request $request, Job $job)
+    {
 
         $this->authorize('update', $job);
 
@@ -80,14 +102,34 @@ class JobController extends Controller
                 ->withErrors($validator);
         }
 
-        $job->update($request->except(['_token','_method']));
+        $job->update($request->except(['_token', '_method']));
+
+        $job->tags()->detach();
+
+        $tagItems = [
+            ['type' => 1, 'data' => array_filter(explode(',', $request->pros))],
+            ['type' => 2, 'data' => array_filter(explode(',', $request->cons))],
+            ['type' => 3, 'data' => array_filter(explode(',', $request->tags))]
+        ];
+
+        foreach ($tagItems as $item) {
+            $typeId = $item['type'];
+            $tags = $item['data'];
+
+            foreach($tags as $tag){
+                $tag = Tag::firstOrCreate(['name' => trim($tag)]);
+                $job->tags()->attach([$tag->id => ['tag_type_id' => $typeId]]);
+            }
+        }
+
 
         return redirect('/jobs')
             ->with('status', 'The job has been updated!');
 
     }
 
-    public function edit(Job $job){
+    public function edit(Job $job)
+    {
         $this->authorize('edit', $job);
 
         return view('jobs.edit', ['job' => $job]);

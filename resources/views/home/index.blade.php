@@ -7,11 +7,11 @@
                 <h2 class="job-title">{{ $job->name }}</h2>
                 <section>
                     <p class="job-rating"><i class="fa fa-check job-pros" aria-hidden="true"></i> {{ count($job->pros) }} pluspunten</p>
-                    <p class="job-rating"><i class="fa fa-times job-cons" aria-hidden="true"></i> {{ count($job->cons) }} minpunten</p>
+                    <p class="job-rating"><i class="fa fa-times job-cons" aria-hidden="true"></i> {{ count($job->tags) }} minpunten</p>
 
                     <div class="job-tags">
                         @foreach($job->tags as $tag)
-                            <span class="chip chip-primary">{{ $tag }}</span>
+                            <span class="chip chip-primary">{{ $tag->name }}</span>
                         @endforeach
                     </div>
 
