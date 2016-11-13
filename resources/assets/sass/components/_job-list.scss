@@ -1,0 +1,51 @@
+.job-list {
+  &__item {
+    text-align: center;
+    margin-bottom: 22px;
+    background-color: $white;
+    width: calc((100%) / 6);
+    display: inline-block;
+    margin-right: 5px;
+    @include box-shadow;
+
+    &__title {
+      margin-bottom: 0;
+      font-size: 17px;
+    }
+
+    &__location {
+      color: #6FB3FB;
+      font-size: 12px;
+    }
+
+    &__details {
+      padding: 0 10px 10px 10px;
+
+      &__description{
+        font-size: 11px;
+        color: #7D8896;
+      }
+
+      &__view{
+        border: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid #CEDAED;
+        color: #636B77;
+        text-transform: capitalize;
+        text-decoration: none;
+        margin-top: 10px;
+        font-size: 13px;
+        display: inline-block;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium-breakpoint) {
+  .job-list__item {
+    width: 100%;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,27 @@
+.board-jobs{
+  &__list{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  &__item{
+    @include box-shadow;
+    background-color: white;
+    font-size: 14px;
+  }
+
+  &__column{
+    padding: 20px 10px;
+
+    &--title{
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid $clouds;
+      margin-bottom: 20px;
+      font-weight: normal;
+      font-size: 15px;
+    }
+  }
+
+}
