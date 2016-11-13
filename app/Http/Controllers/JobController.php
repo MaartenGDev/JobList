@@ -139,6 +139,8 @@ class JobController extends Controller
     {
         $this->authorize('delete', $job);
 
+        $job->tags()->detach();
+
         $job->delete();
 
         return redirect('/jobs')
