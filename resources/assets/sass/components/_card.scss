@@ -3,16 +3,18 @@
   background-color: $white;
   padding: 10px;
 
-  h2{
+  h2 {
     margin: 0;
   }
 }
 
-.full-width-card{
-  @include card;
-  background-color: $white;
+.full-width-card {
+  background-color: white;
+  border-radius: 3px;
+  @include box-shadow;
+  width: calc(100% - 80px);
 
-  h2.card-title{
+  h2.card-title {
     padding: 20px 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -23,7 +25,7 @@
 }
 
 @media (max-width: $medium-breakpoint) {
-  .card{
+  .card {
     width: calc(100% - 40px);
   }
 }
