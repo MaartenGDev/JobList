@@ -42,11 +42,9 @@
         </ul>
         @endif
     </nav>
-    <nav class="breadcrumb">
-        <a href="/jobs" class="breadcrumb__link {{ Request::is('jobs') ? 'breadcrumb__link--active' : ''}}">Overview</a>
-        <a href="/jobs/create" class="breadcrumb__link {{ Request::is('jobs/create') ? 'breadcrumb__link--active' : ''}}">Create Job</a>
-        <a href="/imports" class="breadcrumb__link {{ Request::is('imports') ? 'breadcrumb__link--active' : ''}}">Import Data</a>
-    </nav>
+
+    @section('breadcrumbs')
+    @show
 
     @if (count($errors) > 0 || Session::has('status'))
         <div class="container flash-message-card">

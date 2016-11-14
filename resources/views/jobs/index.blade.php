@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <div class="container board-jobs">
@@ -12,14 +12,14 @@
                 <th class="board-jobs__column board-jobs__column--title">Remove</th>
             </tr>
         @foreach($jobs as $job)
-            <tr class="board-jobs__item">
+            <tr class="board-jobs__row">
                 <td class="board-jobs__column">{{ $job->name }}</td>
-                <td class="board-jobs__column">{{ substr($job->description, 0, 50) }}</td>
+                <td class="board-jobs__column">{{ substr($job->description, 0, 80) }}</td>
                 <td class="board-jobs__column">{{ count($job->pros) }}</td>
                 <td class="board-jobs__column">{{ count($job->cons) }}</td>
-                <td class="board-jobs__column"><a href="/jobs/{{ $job->id }}/edit">Edit</a></td>
+                <td class="board-jobs__column"><a class="board-jobs__link board-jobs__link--default" href="/jobs/{{ $job->id }}/edit">Edit</a></td>
                 <td class="board-jobs__column">
-                    <a href="/jobs/{{ $job->id }}"
+                    <a class="board-jobs__link board-jobs__link--danger" href="/jobs/{{ $job->id }}"
                        onclick="event.preventDefault(); document.getElementById('remove-form-{{ $job->id }}').submit();">
                         Remove
                     </a>

@@ -41,9 +41,8 @@ html {
     display: none; } }
 
 .nav {
-  color: #6a7180;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
-  background-color: #e74c3c; }
+  color: white;
+  background-color: #5465C7; }
   .nav ul {
     margin: 0; }
   .nav li {
@@ -195,9 +194,10 @@ input[type=text], input[type=email], input[type=password], textarea {
   text-align: center;
   margin-bottom: 22px;
   background-color: #ffffff;
-  width: calc((100%) / 6);
+  width: calc((100% - 180px) / 6);
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
+  padding: 10px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
   .job-list__item__title {
     margin-bottom: 0;
@@ -206,7 +206,7 @@ input[type=text], input[type=email], input[type=password], textarea {
     color: #6FB3FB;
     font-size: 12px; }
   .job-list__item__details {
-    padding: 0 10px 10px 10px; }
+    padding: 10px 0 0 0; }
     .job-list__item__details__description {
       font-size: 11px;
       color: #7D8896; }
@@ -287,27 +287,37 @@ a {
     .breadcrumb__link--title {
       color: #43444D; }
     .breadcrumb__link--active {
-      color: #e74c3c; }
+      color: #5465C7; }
 
-.board-jobs__list {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 10px; }
-
-.board-jobs__item {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+.board-jobs {
   background-color: white;
-  font-size: 14px; }
-
-.board-jobs__column {
-  padding: 20px 10px; }
-  .board-jobs__column--title {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ecf0f1;
-    margin-bottom: 20px;
-    font-weight: normal;
-    font-size: 15px; }
+  padding: 10px 15px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+  .board-jobs__list {
+    width: 100%;
+    border-collapse: collapse; }
+  .board-jobs__header {
+    background-color: white; }
+  .board-jobs__row {
+    font-size: 14px; }
+  .board-jobs__link {
+    text-decoration: none; }
+    .board-jobs__link--default {
+      color: #3498db; }
+    .board-jobs__link--danger {
+      color: #e74c3c; }
+  .board-jobs__column {
+    padding: 20px 10px; }
+    .board-jobs__column--title {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ecf0f1;
+      color: #90949D;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      font-weight: normal;
+      font-size: 15px; }
 
 .register-button {
   background-color: #2c3e50;

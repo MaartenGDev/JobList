@@ -1,27 +1,42 @@
-.board-jobs{
-  &__list{
+.board-jobs {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 3px;
+  @include box-shadow;
+  &__list {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
+    border-collapse: collapse;
   }
 
-  &__item{
-    @include box-shadow;
+  &__header{
     background-color: white;
+  }
+  &__row {
     font-size: 14px;
   }
 
-  &__column{
+  &__link{
+    text-decoration: none;
+
+    &--default{
+      color: #3498db;
+    }
+    &--danger{
+      color: #e74c3c;
+    }
+  }
+  &__column {
     padding: 20px 10px;
 
-    &--title{
+    &--title {
       padding: 10px;
       text-align: left;
       border-bottom: 1px solid $clouds;
+      color: #90949D;
+      text-transform: capitalize;
       margin-bottom: 20px;
       font-weight: normal;
       font-size: 15px;
     }
   }
-
 }
