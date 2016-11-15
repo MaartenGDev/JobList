@@ -15,6 +15,10 @@
     font-size: 14px;
   }
 
+  &__link-button{
+    margin-top: 10px;
+    font-size: 13px !important;
+  }
   &__link{
     text-decoration: none;
 
@@ -24,6 +28,7 @@
     &--danger{
       color: #e74c3c;
     }
+
   }
   &__column {
     padding: 20px 10px;

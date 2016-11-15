@@ -304,6 +304,9 @@ a {
     background-color: white; }
   .board-jobs__row {
     font-size: 14px; }
+  .board-jobs__link-button {
+    margin-top: 10px;
+    font-size: 13px !important; }
   .board-jobs__link {
     text-decoration: none; }
     .board-jobs__link--default {
