@@ -45,9 +45,9 @@ class JobController extends Controller
             'city' => 'required|min:5',
             'address' => 'required|min:5',
             'postal' => 'required|min:5',
-            'tags' => 'required|min:5',
-            'pros' => 'required|min:5',
-            'cons' => 'required|min:5',
+            'tags' => 'required',
+            'pros' => 'required',
+            'cons' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -90,9 +90,9 @@ class JobController extends Controller
             'city' => 'required|min:5',
             'address' => 'required|min:5',
             'postal' => 'required|min:5',
-            'tags' => 'required|min:5',
-            'pros' => 'required|min:5',
-            'cons' => 'required|min:5',
+            'tags' => 'required',
+            'pros' => 'required',
+            'cons' => 'required',
         ]);
 
         if ($validator->fails()) {
