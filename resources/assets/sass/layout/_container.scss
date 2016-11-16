@@ -5,9 +5,9 @@
 
 @media screen and (max-width: $medium-breakpoint) {
   .container {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: calc(100% - 100px);
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
   }
   .job-extra-detail{
     display: none;

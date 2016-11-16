@@ -5,18 +5,18 @@
         <table class="board-jobs__list">
             <tr class="board-jobs__header">
                 <th class="board-jobs__column board-jobs__column--title">Name</th>
-                <th class="board-jobs__column board-jobs__column--title">Description</th>
-                <th class="board-jobs__column board-jobs__column--title">Pros</th>
-                <th class="board-jobs__column board-jobs__column--title">Cons</th>
+                <th class="board-jobs__column board-jobs__column--title board-jobs__column--mobile">Description</th>
+                <th class="board-jobs__column board-jobs__column--title board-jobs__column--mobile">Pros</th>
+                <th class="board-jobs__column board-jobs__column--title board-jobs__column--mobile">Cons</th>
                 <th class="board-jobs__column board-jobs__column--title">Edit</th>
                 <th class="board-jobs__column board-jobs__column--title">Remove</th>
             </tr>
             @forelse($jobs as $job)
                 <tr class="board-jobs__row">
                     <td class="board-jobs__column">{{ $job->name }}</td>
-                    <td class="board-jobs__column">{{ substr($job->description, 0, 80) }}</td>
-                    <td class="board-jobs__column">{{ count($job->pros) }}</td>
-                    <td class="board-jobs__column">{{ count($job->cons) }}</td>
+                    <td class="board-jobs__column board-jobs__column--mobile">{{ substr($job->description, 0, 80) }}</td>
+                    <td class="board-jobs__column board-jobs__column--mobile">{{ count($job->pros) }}</td>
+                    <td class="board-jobs__column board-jobs__column--mobile">{{ count($job->cons) }}</td>
                     <td class="board-jobs__column"><a class="board-jobs__link board-jobs__link--default"
                                                       href="/jobs/{{ $job->id }}/edit">Edit</a></td>
                     <td class="board-jobs__column">

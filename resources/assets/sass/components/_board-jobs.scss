@@ -28,8 +28,8 @@
     &--danger{
       color: #e74c3c;
     }
-
   }
+
   &__column {
     padding: 20px 10px;
 
@@ -42,6 +42,14 @@
       margin-bottom: 20px;
       font-weight: normal;
       font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $medium-breakpoint) {
+  .board-jobs__column {
+    &--mobile{
+      display: none;
     }
   }
 }

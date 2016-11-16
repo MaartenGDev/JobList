@@ -11,6 +11,9 @@
 </head>
 <body>
 <header class="preview">
+    <nav class="landing-nav">
+        <a href="/login" class="landing-nav__link landing-nav__link--end">Login</a>
+    </nav>
     <section class="landing-title">
         <h1>JobList</h1>
         <p>The best way to compare jobs!</p>

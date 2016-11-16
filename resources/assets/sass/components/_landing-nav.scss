@@ -1,0 +1,15 @@
+.landing-nav{
+  text-align: right;
+
+  &__link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+    color: white;
+
+    &--end{
+      margin-right: 40px;
+    }
+  }
+}
