@@ -90,7 +90,7 @@ class JobController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('/jobs')
+            return back()
                 ->withInput()
                 ->withErrors($validator);
         }
