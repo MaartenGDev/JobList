@@ -199,10 +199,11 @@ input[type=text], input[type=email], input[type=password], textarea {
   text-align: center;
   margin-bottom: 22px;
   background-color: #ffffff;
-  width: calc((100% - 180px) / 6);
   display: inline-block;
   margin-right: 10px;
+  flex-flow: row wrap;
   padding: 10px;
+  flex-basis: calc(20% - 10px);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
   .job-list__item__title {
     margin-bottom: 0;

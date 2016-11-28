@@ -45,3 +45,15 @@
         </table>
     </div>
 @endsection
+
+
+
+<div class="person">
+    <section class="person__head">
+
+    </section>
+    <section class="person__body">
+
+    </section>
+
+</div>
