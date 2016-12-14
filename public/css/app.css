@@ -204,6 +204,7 @@ input[type=text], input[type=email], input[type=password], textarea {
   flex-flow: row wrap;
   padding: 10px;
   flex-basis: calc(20% - 10px);
+  position: relative;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
   .job-list__item__title {
     margin-bottom: 0;
@@ -224,10 +225,15 @@ input[type=text], input[type=email], input[type=password], textarea {
       color: #636B77;
       text-transform: capitalize;
       text-decoration: none;
-      margin-top: 10px;
       font-size: 13px;
       display: inline-block;
-      font-weight: bold; }
+      font-weight: bold;
+      bottom: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 65px;
+      margin: 10px auto 0 auto; }
 
 @media (max-width: 1024px) {
   .job-list__item {

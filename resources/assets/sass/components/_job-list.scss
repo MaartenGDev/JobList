@@ -8,6 +8,8 @@
     flex-flow: row wrap;
     padding: 10px;
     flex-basis: calc(20% - 10px);
+    position: relative;
+
     @include box-shadow;
 
 
@@ -36,10 +38,15 @@
         color: #636B77;
         text-transform: capitalize;
         text-decoration: none;
-        margin-top: 10px;
         font-size: 13px;
         display: inline-block;
         font-weight: bold;
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 65px;
+        margin: 10px auto 0 auto;
       }
     }
   }
