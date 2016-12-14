@@ -6,7 +6,7 @@
         <div class="job-details">
             @if ($job->url)
                 <div class="job-links">
-                    <a class="job-link" href="{{ $job->url }}"><i class="fa fa-external-link"
+                    <a target="_blank" class="job-link" href="{{ $job->url }}"><i class="fa fa-external-link"
                                                                   aria-hidden="true"></i>{{ $job->url }}</a>
                 </div>
             @endif
