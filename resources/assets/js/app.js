@@ -14,17 +14,17 @@ mobileNavigation.addEventListener("click", () => {
 
 
 window.onload = () => {
-    console.log('lets go');
     const jobs = document.querySelectorAll('.job-list__item');
     let height = 0;
+    const buttonHeight = 50;
 
     jobs.forEach(job => {
-        if(job.offsetHeight > height){
-            height = job.offsetHeight;
-        }
+        height = Math.max(job.offsetHeight, height);
     });
 
+    height += buttonHeight;
+
     jobs.forEach(job => {
-       job.style.height = (height + 50) + 'px';
+       job.style.height = `${height}px`;
     });
 }
